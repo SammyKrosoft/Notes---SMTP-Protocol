@@ -33,7 +33,7 @@ Basic SMTP structure (from RFC 2821):
 
 User-level email clients typically use SMTP only for sending messages to a mail server for relaying, and typically submit outgoing email to the mail server on port 587 or 465 per RFC 8314
 
-SMTP servers commonly use the Transmission Control Protocol on port number 25 (for plaintext) and 587 (for encrypted communications).
+SMTP servers commonly **but not systematically** use the Transmission Control Protocol on port number 25 (for plaintext) and 587 (for encrypted communications).
 
 Email is submitted by a mail client (mail user agent, MUA) to a mail server (mail submission agent, MSA) using SMTP on TCP port 587. Most mailbox providers still allow submission on traditional port 25.
 
