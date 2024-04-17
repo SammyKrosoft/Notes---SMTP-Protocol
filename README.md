@@ -31,6 +31,8 @@ Basic SMTP structure (from RFC 2821):
 - Port 465
 - Port 2525
 
+Port 25 was initially designed for mail transfer, not submission. Hence ISPs often block this port by default.
+
 User-level email clients typically use SMTP only for sending messages to a mail server for relaying, and typically submit outgoing email to the mail server on port 587 or 465 per RFC 8314
 
 SMTP servers commonly **but not systematically** use the Transmission Control Protocol on port number 25 (for plaintext) and 587 (for encrypted communications).
@@ -106,14 +108,5 @@ EHLO
 250 AUTH=PLAIN LOGIN
 ```
 
-## Port 25
-
-Port 25 was initially designed for mail transfer, not submission. Hence ISPs often block this port by default.
-
-## Port 587
-
-## Port 465
-
-## Port 2525
 
 
