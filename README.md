@@ -92,6 +92,8 @@ There are 2 definitions of TLS strategies:
 
 ## Testing StartTLS
 
+To see if the target SMTP server supports STARTTLS, you can simply use Telnet with the "EHLO" command (stands for Extended HELO):
+
 ```batch
 $ telnet smtp.contoso.ca 25
 Trying 10.13.12.45...
@@ -107,6 +109,14 @@ EHLO
 250-AUTH PLAIN LOGIN
 250 AUTH=PLAIN LOGIN
 ```
+
+To manually use STARTTLS, you must use another command or utility such as OpenSSL.exe like the following examples:
+
+```batch
+openssl s_client -starttls smtp -4 -connect smtp.contoso.ca:587 -crlf -ign_eof
+```
+
+> Note: the -4 switch is used above to force IPv4 protocol (instead of ipv6)
 
 
 
