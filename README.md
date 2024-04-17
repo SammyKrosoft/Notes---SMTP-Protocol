@@ -110,4 +110,10 @@ EHLO
 
 Port 25 was initially designed for mail transfer, not submission. Hence ISPs often block this port by default.
 
-## Port 
+## Port 587
+
+## Port 465
+
+## Port 2525
+
+
